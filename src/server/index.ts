@@ -14,6 +14,7 @@ export const app = express()
 
 connectionDB()
 
+app.disable('x-powered-by')
 app.use(corsConfig)
 app.use(requestLimiter)
 app.use(httpTimeOut)
