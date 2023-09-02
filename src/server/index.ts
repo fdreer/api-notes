@@ -17,10 +17,10 @@ connectionDB()
 app.disable('x-powered-by')
 app.use(corsConfig)
 // app.use(requestLimiter)
-// app.use(httpTimeOut)
+app.use(httpTimeOut)
 app.use(express.urlencoded({ extended: true, limit: '50mb' })) // ❓❓❓
 app.use(express.json())
-// app.use(limitPayloadSize)
+app.use(limitPayloadSize)
 
 // Se utiliza el index de todas las rutas
 app.use('/api', rootRouter)

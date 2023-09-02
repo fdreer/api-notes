@@ -21,8 +21,8 @@ export const httpTimeOut = (
   res: Response,
   next: NextFunction
 ) => {
-  req.setTimeout(5000) // Set request timeout to 5 seconds
-  res.setTimeout(5000) // Set response timeout to 5 seconds
+  req.setTimeout(10000) // Set request timeout to 5 seconds
+  res.setTimeout(10000) // Set response timeout to 5 seconds
   next()
 }
 
